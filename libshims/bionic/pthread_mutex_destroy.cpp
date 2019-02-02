@@ -57,7 +57,7 @@ static_assert(alignof(pthread_mutex_t) == 4,
               "pthread_mutex_t should fulfill the alignment of pthread_mutex_internal_t.");
 
 static inline pthread_mutex_internal_t* __get_internal_mutex(pthread_mutex_t* mutex_interface) {
-  return reinterpret_cast<pthread_mutex_internal_t*>(mutex_interface);
+    return reinterpret_cast<pthread_mutex_internal_t*>(mutex_interface);
 }
 
 static inline __always_inline bool IsMutexDestroyed(uint16_t mutex_state) {
